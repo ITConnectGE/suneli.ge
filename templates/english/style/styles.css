@@ -1,0 +1,278 @@
+body {
+	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+	margin: 0;
+	padding: 0;
+	color: #fff;
+	background:url(../images/rightfooterbg.png) no-repeat bottom right fixed #000;
+}
+
+/* ~~ Element/tag selectors ~~ */
+ul, ol, dl { /* Due to variations between browsers, it's best practices to zero padding and margin on lists. For consistency, you can either specify the amounts you want here, or on the list items (LI, DT, DD) they contain. Remember that what you do here will cascade to the .nav list unless you write a more specific selector. */
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;	 /* removing the top margin gets around an issue where margins can escape from their containing div. The remaining bottom margin will hold it away from any elements that follow. */
+	padding-right: 15px;
+	padding-left: 15px; /* adding the padding to the sides of the elements within the divs, instead of the divs themselves, gets rid of any box model math. A nested div with side padding can also be used as an alternate method. */
+}
+a img { /* this selector removes the default blue border displayed in some browsers around an image when it is surrounded by a link */
+	border: none;
+}
+
+/* ~~ Styling for your site's links must remain in this order - including the group of selectors that create the hover effect. ~~ */
+a:link {
+	color:#fff;
+	text-decoration: none; /* unless you style your links to look extremely unique, it's best to provide underlines for quick visual identification */
+}
+a:visited {
+	color: #fff;
+	text-decoration: none;
+}
+a:hover, a:active, a:focus { /* this group of selectors will give a keyboard navigator the same hover experience as the person using a mouse. */
+	text-decoration: none;
+}
+
+.container {
+	min-width: 1160px;/* a min-width may be desirable to keep this layout from getting too narrow. This keeps line length more readable in the side columns. IE6 does not respect this declaration. */
+	background: #000;
+	margin: 0 auto; /* the auto value on the sides, coupled with the width, centers the layout. It is not needed if you set the .container's width to 100%. */
+	overflow: hidden; /* this declaration makes the .container clear all floated columns within it. */
+	background: url(../images/index_bg4.png) no-repeat left top fixed;
+}
+
+.sidebar1 {
+	float: left;
+	width:30%;
+	padding-bottom: 10px;
+}
+.content {
+	padding: 10px 0;
+	min-width:70%;
+	float: left;
+}
+
+/* ~~ This grouped selector gives the lists in the .content area space ~~ */
+.content ul, .content ol { 
+	padding: 0 15px 15px 40px; /* this padding mirrors the right padding in the headings and paragraph rule above. Padding was placed on the bottom for space between other elements on the lists and on the left to create the indention. These may be adjusted as you wish. */
+}
+
+/* ~~ The navigation list styles (can be removed if you choose to use a premade flyout menu like Spry) ~~ */
+ul.nav {
+	list-style: none; /* this removes the list marker */
+	border-top: 1px solid #666; /* this creates the top border for the links - all others are placed using a bottom border on the LI */
+	margin-bottom: 15px; /* this creates the space between the navigation on the content below */
+}
+ul.nav li {
+	border-bottom: 1px solid #666; /* this creates the button separation */
+}
+ul.nav a, ul.nav a:visited { /* grouping these selectors makes sure that your links retain their button look even after being visited */
+	padding: 5px 5px 5px 15px;
+	display: block; /* this gives the link block properties causing it to fill the whole LI containing it. This causes the entire area to react to a mouse click. */
+	text-decoration: none;
+	background: #8090AB;
+	color: #000;
+}
+ul.nav a:hover, ul.nav a:active, ul.nav a:focus { /* this changes the background and text color for both mouse and keyboard navigators */
+	background: #6F7D94;
+	color: #FFF;
+}
+
+/* ~~miscellaneous float/clear classes~~ */
+.fltrt {  /* this class can be used to float an element right in your page. The floated element must precede the element it should be next to on the page. */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* this class can be used to float an element left in your page. The floated element must precede the element it should be next to on the page. */
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { /* this class can be placed on a <br /> or empty div as the final element following the last floated div (within the #container) if the overflow:hidden on the .container is removed */
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
+
+.post-img{
+float: left;
+width: 30%;
+}
+
+.post{
+float: left;
+width: 60%;
+}
+
+
+@font-face{font-family:BPG;src:url('/fonts/bpg_supersquare_caps_2013.ttf');}
+@font-face{font-family:GLH;src:url('/fonts/bpg_arial_2009.ttf');}
+@font-face{font-family:ARA;src:url('/fonts/NeoSansCyr-Regular.ttf');}
+@font-face{font-family:BPGNinoMtavruliNormal;src:url('/fonts/bpg_nino_mtavruli_normal.ttf');}
+.fontnino{font-family:BPGNinoMtavruliNormal;}
+
+
+
+
+.slide-header2 {
+	width:800px; 
+	padding:6px;
+	color:#000;
+	height:125px;
+}
+
+
+.produqcia-list {width:700px; }
+.produqcia-img { float:left; width:200px; padding-top:30px;  }
+
+.produqcia-details {float:left; width:500px; font-size:14px;}
+.produqcia-details img {max-width:350px; margin:10px;}
+
+
+.produqcia-satauri {font-size:14px; font-weight:bold; text-decoration:underline;}
+
+.pager_link{
+	color:#fff;
+}
+.required_field {
+	color: #fff;	
+	font-weight:bold;
+}
+.error_field {
+	color: red; 
+	font-weight:bold;
+}
+div#error{
+	text-align:center;
+	color: red; 
+	font-weight:bold;
+
+}
+a.item {
+	margin:0px;
+	padding:0px;
+	font-size:15px;
+}
+.error {
+	background-color: #f0f0f0;
+	border: 1px dashed #CFCFCF;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding: 5px 5px 5px 5px;
+	color: red;
+	width:400;
+	align:center;
+	font-weight: bold;
+	text-align:left;
+}
+.form {
+	border:1px solid black;
+}
+.success {
+	background-color: #f0f0f0;
+	border: 1px dashed #CFCFCF;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding: 5px 5px 5px 5px;
+	width:400;
+	align:center;
+	text-align:left;
+}
+.picture {
+	background-image: url(../images/index_bg.gif);
+	background-repeat: no-repeat;
+	background-position: left top;
+	height: 528px;
+}
+.picture2 {
+	background-image: url(../images/index_bg4.png);
+	background-repeat: no-repeat;
+	background-position: left top;
+	height: 628px;
+	opocity:70%;
+}
+
+
+
+.whiteBig {
+	font-size: 30px;
+	color: #FFFFFF;
+}
+.WhiteNormal {
+	font-size: 12px;
+	color: #FFFFFF;
+}
+.WhiteMedium {
+	font-size: 20px;
+	color: #FFFFFF;
+}
+.news {
+	font-size: 10px;
+}
+.news_date {
+	color:#c0c0c0;
+	
+}
+.line {
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: solid;
+	border-top-color: #666666;
+	border-right-color: #666666;
+	border-bottom-color: #666666;
+	border-left-color: #666666;
+}
+.redSmalText {
+	font-size: 9px;
+	color: #009933;
+}
+.WHiteSmall a {
+	font-size: 12px;
+	color: #FFFFFF;
+	text-decoration:none;
+}
+
+.bg_second {
+	background-image: url(../images/bg_second.gif);
+	background-repeat: no-repeat;
+	background-position: left top;
+	height: 586px;
+}
+.top_second {
+	background-image: url(../images/top_second.jpg);
+	background-repeat: no-repeat;
+	background-position: left top;
+	height: 116px;
+}
+a, td {
+	color:#fff;
+}
+
+
+
+.pagination {display:inline-block;padding-left:0;margin:20px 0;border-radius:4px}
+.pagination>li{display:inline}
+.pagination>li>a,.pagination>li>span{position:relative;float:left;padding:6px 12px;line-height:1.42857143;text-decoration:none;color:#F00;background-color:#fff;border:1px solid #ddd;margin-left:-1px}
+.pagination>li:first-child>a,.pagination>li:first-child>span{margin-left:0;border-bottom-left-radius:4px;border-top-left-radius:4px}
+.pagination>li:last-child>a,.pagination>li:last-child>span{border-bottom-right-radius:4px;border-top-right-radius:4px}
+.pagination>li>a:hover,.pagination>li>span:hover,.pagination>li>a:focus,.pagination>li>span:focus{color:#F00;background-color:#eee;border-color:#ddd}
+.pagination>.active>a,.pagination>.active>span,.pagination>.active>a:hover,.pagination>.active>span:hover,.pagination>.active>a:focus,.pagination>.active>span:focus{
+	z-index:2;
+	color:#fff;
+	background-color:#C03;
+	border-color:#900;
+	cursor:default
+}
+.pagination>.disabled>span,.pagination>.disabled>span:hover,.pagination>.disabled>span:focus,.pagination>.disabled>a,.pagination>.disabled>a:hover,.pagination>.disabled>a:focus{color:#999;background-color:#fff;border-color:#ddd;cursor:not-allowed}
+.pagination-lg>li>a,.pagination-lg>li>span{padding:10px 16px;font-size:18px}
+.pagination-lg>li:first-child>a,.pagination-lg>li:first-child>span{border-bottom-left-radius:6px;border-top-left-radius:6px}
+.pagination-lg>li:last-child>a,.pagination-lg>li:last-child>span{border-bottom-right-radius:6px;border-top-right-radius:6px}
+.pagination-sm>li>a,.pagination-sm>li>span{padding:5px 10px;font-size:12px}
+.pagination-sm>li:first-child>a,.pagination-sm>li:first-child>span{border-bottom-left-radius:3px;border-top-left-radius:3px}
+.pagination-sm>li:last-child>a,.pagination-sm>li:last-child>span{border-bottom-right-radius:3px;border-top-right-radius:3px}
+.pager{padding-left:0;margin:20px 0;list-style:none;text-align:center}
